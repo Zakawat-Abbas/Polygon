@@ -32,7 +32,7 @@ app.get('/stock/:symbol/:startDate/:endDate', async (req, res) => {
         if (dataFromDB.length > 0) {
             res.json(dataFromDB);
         } else {
-            const polygonApiKey = 'i2WuoplBhZP7jeU5g1fpi6t7Xkn4Kc98';
+            const polygonApiKey = '';
             const polygonUrl = `https://api.polygon.io/v2/aggs/ticker/${symbol}/range/1/day/${startDate}/${endDate}?apiKey=${polygonApiKey}`;
 
             const response = await axios.get(polygonUrl);
